@@ -1,0 +1,162 @@
+/* RESET / BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+/* CONTAINER */
+.login-container {
+  max-width: 420px;
+  width: 100%;
+  margin: 60px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADINGS */
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.login-container .lead {
+  text-align: center;
+  color: #666;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+/* ALERT */
+/* .alert {
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.alert-danger {
+  background: #ffe6e6;
+  color: #b30000;
+  border: 1px solid #ffcccc;
+} */
+
+/* DEMO CREDENTIALS */
+.demo-credentials {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.demo-credentials h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.credential-group {
+  margin-bottom: 12px;
+}
+
+.credential-group h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.credential-group p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .login-container {
+    margin: 40px 16px;
+    padding: 28px;
+  }
+
+  .login-container h1 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .login-container {
+    margin: 24px 12px;
+    padding: 22px;
+  }
+
+  .login-container h1 {
+    font-size: 22px;
+  }
+
+  .form-group input {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .demo-credentials h3 {
+    font-size: 15px;
+  }
+}
