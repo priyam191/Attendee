@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/AuthContext';
 import './course.css';
 
 const CourseDetails = () => {
-  const url = "http://localhost:5000";
+  const url = "https://attendee-6ox7.onrender.com";
   const { id } = useParams();
   const { role } = useContext(AuthContext);
 

@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/AuthContext';
 
 
 const ViewAttendance = () => {  
-    const url = "http://localhost:5000";
+    const url = "https://attendee-6ox7.onrender.com";
     const [course, setCourse] = useState(null);
     
     // Route is defined as: /student/attendance/:id in App.js

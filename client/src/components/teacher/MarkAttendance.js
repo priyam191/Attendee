@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { useContext } from 'react';
 
 const MarkAttendance = () => {
-    const url = "http://localhost:5000";
+    const url = "https://attendee-6ox7.onrender.com";
   const [course, setCourse] = useState(null);
   const [attendanceDate, setAttendanceDate] = useState('');
   const [students, setStudents] = useState([]);

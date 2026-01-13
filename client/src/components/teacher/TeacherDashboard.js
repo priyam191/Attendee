@@ -8,7 +8,7 @@ import './teacher.css';
 
 
 function TeacherDashboard() {
-  const url = "http://localhost:5000";
+  const url = "https://attendee-6ox7.onrender.com";
   const [teacher, setTeacher] = useState(null);
   const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
