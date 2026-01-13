@@ -4,10 +4,10 @@ import { AuthContext } from '../../context/AuthContext';
 import './home.css';
 
 const Home = () => {
-  const { isAuthenticated, role } = useContext(AuthContext);
+  const { authenticated, role } = useContext(AuthContext);
 
   // Redirect if already logged in
-  if (isAuthenticated) {
+  if (authenticated) {
     if (role === 'student') {
       return <Navigate to="/student/dashboard" />;
     } else if (role === 'teacher') {
