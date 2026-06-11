@@ -71,9 +71,13 @@ const ViewAttendance = () => {
         };
 
         fetchData();
-    },[courseId]);
+    }, [courseId, user]);
     if (loading) {
     return <div className="loading">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="alert alert-danger">{error}</div>;
   }
 
   if (!course) {

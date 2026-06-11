@@ -1,6 +1,5 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
 import './login.css';
 
 const Login = () => {
@@ -11,8 +10,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const { email, password } = formData;
   const [isLoading, setIsLoading] = useState(false);
-  const { login, authenticated, role } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });

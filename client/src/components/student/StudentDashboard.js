@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext  } from "react"
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import './student.css';
@@ -8,7 +8,6 @@ function StudentDashboard() {
   const url = "https://attendee-6ox7.onrender.com";
   const [student, setStudent] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [attendanceSummary, setAttendanceSummary] = useState({});
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -40,7 +39,7 @@ function StudentDashboard() {
     if(user){
       fetchStudentData();
     }
-  }, [user]);
+  }, [user, navigate]);
   if(loading){
     return <div className="loading">Loading...</div>;
   }

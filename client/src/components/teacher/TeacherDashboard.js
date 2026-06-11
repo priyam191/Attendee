@@ -40,7 +40,7 @@ function TeacherDashboard() {
   };
 
   fetchTeacherData();
-}, [user]);
+}, [user, navigate]);
 
 if (loading) {
     return <div className="loading">Loading...</div>;
