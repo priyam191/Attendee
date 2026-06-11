@@ -7,15 +7,20 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
+const { responseTimeMiddleware } = require('./middlewares/responseTime');
 const authRoutes = require('./routes/auth');
 const studentRoutes = require('./routes/students');
 const teacherRoutes = require('./routes/teachers');
 const courseRoutes = require('./routes/courses');
 const attendanceRoutes = require('./routes/attendance');
+const statsRoutes = require('./routes/stats');
 
 // Middleware
 app.use(express.json());
 app.use(cors());
+
+// Response time tracking for /api/* (for performance stats demo)
+app.use('/api', responseTimeMiddleware);
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -23,8 +28,7 @@ app.use('/api/students', studentRoutes);
 app.use('/api/teachers', teacherRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/attendance', attendanceRoutes);
-
-
+app.use('/api/stats', statsRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

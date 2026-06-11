@@ -23,6 +23,9 @@ function Navbar() {
             </div>
 
             <ul className='navbar-links'>
+                <li className='nav-item'>
+                    <Link to="/performance">Performance</Link>
+                </li>
                 {!authenticated ? (
                     <>
                         <li className='nav-item'>
